@@ -10,7 +10,12 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
 }
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+targetCompatibility = '10'
+sourceCompatibility = '10'
+apply plugin: 'eclipse'
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'

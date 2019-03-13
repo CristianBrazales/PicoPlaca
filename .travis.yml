@@ -1,8 +1,5 @@
-language: java
+anguage: java
 install: true
-
 jdk:
-  - oraclejdk8
-
-script:
-  - ./gradlew build --scan -s
+  - oraclejdk11
+  - openjdk11
